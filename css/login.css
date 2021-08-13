@@ -1,0 +1,148 @@
+* {
+  /* border: 1px solid grey; */
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  height: 98%;
+}
+body {
+  height: 100%;
+  background-image: url(../assets/bg.jpg);
+  background-size: cover;
+}
+
+.container {
+  border-right: 1px solid rgba(50, 66, 93, 0.233);
+  padding-left: 60px;
+  padding-right: 60px;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.loginBox {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+.pad {
+  padding-left: 15px;
+}
+
+input {
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid grey;
+  width: 200px;
+  padding: 20px;
+  margin: 10px;
+  transition: 0.25s;
+}
+input[type="email"]:focus {
+  border: 2px solid grey;
+  background-color: rgb(242, 242, 242);
+  width: 250px;
+}
+input[type="password"]:focus {
+  border: 2px solid grey;
+  background-color: rgb(242, 242, 242);
+  width: 250px;
+}
+
+/* copy paste from stackoverflow */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px rgb(255, 255, 255) inset !important;
+}
+
+input[type="submit"] {
+  font-weight: bold;
+  padding: 15px;
+  margin-top: 50px;
+  width: 100px;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(241, 241, 241);
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(207, 207, 207);
+}
+
+.horizontalCenterLogin {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.horizontalCenterSignUp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.horizontalContainer {
+  margin: 0px 500px;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.horizontalCenterSubmit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+h1 {
+  color: rgb(50, 66, 93);
+  font-size: 55px;
+}
+.signUp {
+  font-size: small;
+}
+
+a {
+  color: cornflowerblue;
+}
+
+.verticalContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description {
+  color: rgb(50, 66, 93);
+  padding: 15px;
+  font-size: large;
+  text-align: start;
+}
+
+.bg {
+  margin: auto;
+  background-image: url(../assets/bgPattern.jpg);
+  background-size: cover;
+  height: 100%;
+  width: 700px;
+}
+
+.card {
+  border-radius: 5px;
+  background-color: white;
+  display: flex;
+  width: min-content;
+  flex-direction: row;
+  justify-content: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 5px 15px rgba(15, 0, 9, 0.4);
+  transition: box-shadow 0.3s ease-in-out;
+}
