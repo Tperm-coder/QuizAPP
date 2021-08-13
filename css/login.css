@@ -13,7 +13,6 @@ body {
 }
 
 .container {
-  border-right: 1px solid rgba(50, 66, 93, 0.233);
   padding-left: 60px;
   padding-right: 60px;
   width: max-content;
@@ -53,9 +52,11 @@ input[type="password"]:focus {
 }
 
 /* copy paste from stackoverflow */
+/* disable blue background when auto fill */
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 30px rgb(255, 255, 255) inset !important;
 }
+/*  */
 
 input[type="submit"] {
   font-weight: bold;
@@ -106,7 +107,7 @@ h1 {
 }
 
 a {
-  color: cornflowerblue;
+  color: rgb(178, 43, 219);
 }
 
 .verticalContainer {
@@ -132,7 +133,6 @@ a {
 }
 
 .card {
-  border-radius: 5px;
   background-color: white;
   display: flex;
   width: min-content;
