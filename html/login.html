@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
-      content="width=
+      content="width=device-width
     , initial-scale=1.0"
     />
     <title>Quiz app</title>
@@ -27,18 +27,32 @@
                 <h1 class="horizontalCenterSignUp">Code Quizzler</h1>
                 <div class="loginBox">
                   <div class="horizontalCenterSignUp">
-                    <input type="email" name="email" placeholder="Email" />
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                    />
                   </div>
                   <div class="horizontalCenterSignUp">
                     <input
+                      id="password"
                       type="password"
                       name="password"
                       placeholder="Password"
                     />
                   </div>
                   <div class="horizontalCenterSignUp">
-                    <input type="submit" name="submit" />
+                    <input
+                      onclick="getAccountsData()"
+                      type="submit"
+                      name="submit"
+                    />
                   </div>
+                  <div
+                    id="invalid"
+                    class="invalid horizontalCenterSignUp"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -52,5 +66,6 @@
         </div>
       </div>
     </div>
+    <script src="../js/login.js"></script>
   </body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/userMainPage.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navBar">
+      <div onclick="home()" class="appName">Code Quizzler</div>
+      <div class="options">
+        <div onclick="takeQuiz()" class="page">take quiz</div>
+        <div onclick="contact()" class="page">contact</div>
+        <div onclick="about()" class="page">about</div>
+      </div>
+      <div>
+        <div class="material-icons">account_circle</div>
+        <div onclick="logOut()" class="material-icons">logout</div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer">
+        <p style="color: white">Author: Quiz Squad</p>
+        <a
+          style="font-size: small"
+          class="page"
+          href="https://github.com/Tperm-coder/QuizAPP"
+          >https://github.com/Tperm-coder/QuizAPP</a
+        >
+      </div>
+    </footer>
+    <script src="../js/userMainpage.js"></script>
+  </body>
+</html>

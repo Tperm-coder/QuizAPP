@@ -58,6 +58,10 @@ input:-webkit-autofill {
 }
 /*  */
 
+.invalid {
+  color: rgb(241, 47, 89);
+  font-size: small;
+}
 input[type="submit"] {
   font-weight: bold;
   padding: 15px;

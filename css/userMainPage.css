@@ -1,0 +1,97 @@
+* {
+  /* border: 1px solid grey; */
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  background-image: url(../assets/welcome.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navBar {
+  font-weight: 600;
+  color: rgb(233, 233, 233);
+  border-radius: 2px;
+  padding: 15px;
+  background-color: #3f5efb;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.page {
+  transition: text-decoration-color 500ms, text-underline-offset 500ms;
+  text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+  text-underline-offset: 0.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: middle;
+  margin-right: 45px;
+  font-size: larger;
+}
+
+.appName {
+  color: rgb(233, 233, 233);
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+.appName:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.page:hover {
+  color: white;
+  cursor: pointer;
+  text-decoration-color: rgb(255, 255, 255);
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+}
+
+.material-icons {
+  margin-left: 10px;
+  color: rgb(233, 233, 233);
+  cursor: pointer;
+  font-size: 35px;
+}
+.material-icons:hover {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(233, 233, 233);
+}
+
+footer {
+  padding: 10px;
+  background-color: #3f5efb;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
