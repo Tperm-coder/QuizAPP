@@ -10,6 +10,109 @@ html {
 }
 body {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.choose {
+  padding: 10px;
+  font-size: x-large;
+  border: 1px dashed #a9b7ff;
+}
+
+.label {
+  margin: 5px;
+}
+
+.nxtBtn {
+  margin: 20px;
+}
+
+.rad {
+  margin: 15px;
+}
+
+.spn {
+  font-family: "Ubuntu", sans-serif;
+  font-size: xx-large;
+}
+
+.qBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.rules {
+  padding: 15px;
+  text-align: start;
+  font-weight: normal;
+  font-size: x-large;
+  margin-top: 10px;
+  border: 1px dashed #a9b7ff;
+}
+.rule {
+  margin-bottom: 10px;
+}
+.result {
+  font-size: xx-large;
+}
+.optionsQ {
+  /* border-right: 1px dashed whitesmoke; */
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  font-weight: bolder;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  height: min-content;
+}
+label {
+  margin: 5px;
+}
+.btn {
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+  color: #5266c9;
+  background-color: rgb(228, 228, 228);
+  width: fit-content;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-size: x-large;
+}
+
+.btn:hover {
+  background-color: white;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.rows {
+  display: flex;
+  flex-direction: row;
+}
+select {
+  padding: 5px;
+  font-size: large;
+  font-family: "Ubuntu", sans-serif !important;
+  border-radius: 5px;
+}
+option {
+  background-color: #f7f7f7da;
+}
+
+.questionArea {
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  margin: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+  width: auto;
+  height: 100%;
+  background-color: #3f5efbda;
 }
 
 .navBar {
@@ -78,4 +181,37 @@ body {
 a {
   text-decoration: none;
   color: rgb(233, 233, 233);
+}
+
+footer {
+  padding: 10px;
+  background-color: #3f5efb;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.questions {
+  /* padding: 15px; */
+  color: white;
+  border-radius: 5px;
+  background-color: rgb(79, 81, 216);
+  width: 100%;
+  height: 100%;
+}
+
+.q {
+  font-family: "Ubuntu", sans-serif;
+  margin: 15px;
+  font-size: xx-large;
+  margin-bottom: 50px;
+}
+
+input[type="radio"] {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+  transform: scale(1.5);
 }
