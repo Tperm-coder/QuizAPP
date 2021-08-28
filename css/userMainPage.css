@@ -22,7 +22,13 @@ body {
   color: rgb(233, 233, 233);
   border-radius: 2px;
   padding: 15px;
-  background-color: #3f5efb;
+  background: rgb(148, 80, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(148, 80, 255, 1) 0%,
+    rgba(169, 67, 219, 1) 47%,
+    rgba(165, 48, 223, 1) 78%
+  );
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -87,7 +93,7 @@ a {
 
 footer {
   padding: 10px;
-  background-color: #3f5efb;
+  background: rgb(114, 65, 194);
 }
 
 .footer {

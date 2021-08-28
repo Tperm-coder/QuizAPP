@@ -16,6 +16,7 @@ function checkLoginSession() {
     logOut();
   }
 }
+
 checkCurrentUrl();
 function checkCurrentUrl() {
   var url = window.location.pathname;
@@ -41,13 +42,17 @@ function profile() {
 }
 
 function getProfiledata() {
-  var json = getData();
-  document.getElementById("name").textContent = `Hi ${localStorage.getItem(
-    "email"
-  )}`;
-  document.getElementById("score").textContent = `Your score is : ${
-    json[localStorage.getItem("email")].score
-  }`;
+  if (localStorage.getItem("email") == "admin") {
+    console.log("admin");
+  } else {
+    var json = getData();
+    document.getElementById("name").textContent = `Hi ${localStorage.getItem(
+      "email"
+    )}`;
+    document.getElementById("score").textContent = `Your score is : ${
+      json[localStorage.getItem("email")].score
+    }`;
+  }
 }
 
 function getData() {
