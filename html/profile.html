@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/takeQuiz.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,39 +34,11 @@
         <div onclick="logOut()" class="material-icons">logout</div>
       </div>
     </div>
-    <div class="questionArea">
-      <div class="optionsQ">
-        <div class="choose">
-          <div class="label">Choose a category :</div>
-          <div>
-            <select name="category" id="category">
-              <option value="Computer">Computer</option>
-              <option value="General_knowledge">General knowledge</option>
-              <option value="AnimeMange">Anime & Mange</option>
-            </select>
-          </div>
-        </div>
-        <div class="choose">
-          <div class="label">Choose difficulty :</div>
-          <div>
-            <select name="category" id="difficulty">
-              <option value="easy">Easy</option>
-              <option value="medium">Medium</option>
-              <option value="hard">Hard</option>
-            </select>
-          </div>
-        </div>
-        <div class="rules">
-          <div class="rule">Each difficulty has different score</div>
-          <div class="">Easy: 5 points</div>
-          <div class="">Medium: 10 points</div>
-          <div class="">Hard: 15 points</div>
-        </div>
-        <div class="row">
-          <div onclick="start()" class="btn">start</div>
-        </div>
+    <div class="centerv">
+      <div class="data">
+        <div id="name" class="name"></div>
+        <div id="score" class="score"></div>
       </div>
-      <div id="qBox" class="questions"></div>
     </div>
     <footer>
       <div class="footer">

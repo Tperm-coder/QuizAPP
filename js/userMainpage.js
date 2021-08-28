@@ -1,19 +1,29 @@
 const radName = "radioBtn";
 const btn = `<div class="row nxtBtn"><div onclick="nextQuestion()" class="btn">Next</div></div>`;
 const res = `<div id="res" class="result"></div>`;
-var json;
-var category;
-var difficulty;
-var url;
-var score = 0;
-var index = -1;
-var score = 0;
 const map = {
   Math: "19",
   General_knowledge: "9",
   Computer: "18",
   AnimeMange: "31",
 };
+var score = 0;
+var index = -1;
+
+checkLoginSession();
+function checkLoginSession() {
+  if (localStorage.getItem("login") == "false") {
+    logOut();
+  }
+}
+checkCurrentUrl();
+function checkCurrentUrl() {
+  var url = window.location.pathname;
+  url = url.split("/");
+  if (url[2] == "profile.html") {
+    getProfiledata();
+  }
+}
 function logOut() {
   document.location.replace("../html/login.html");
 }
@@ -26,16 +36,41 @@ function takeQuiz() {
   document.location.replace("../html/takeQuiz.html");
 }
 
+function profile() {
+  document.location.replace("../html/profile.html");
+}
+
+function getProfiledata() {
+  var json = getData();
+  document.getElementById("name").textContent = `Hi ${localStorage.getItem(
+    "email"
+  )}`;
+  document.getElementById("score").textContent = `Your score is : ${
+    json[localStorage.getItem("email")].score
+  }`;
+}
+
+function getData() {
+  var json = localStorage.getItem("json");
+  if (json === null) {
+    getAdminData();
+    return JSON.parse(localStorage.getItem("json"));
+  } else {
+    return JSON.parse(json);
+  }
+}
+
 function start() {
+  document.getElementById("qBox").innerHTML = "";
   index = -1;
   // clear question area
 
   // taking user input
-  category = document.getElementById("category").value;
-  difficulty = document.getElementById("difficulty").value;
+  var category = document.getElementById("category").value;
+  var difficulty = document.getElementById("difficulty").value;
 
   // creating url
-  url = `https://opentdb.com/api.php?amount=10&category=${map[category]}&difficulty=${difficulty}&type=multiple`;
+  var url = `https://opentdb.com/api.php?amount=10&category=${map[category]}&difficulty=${difficulty}&type=multiple`;
 
   // fetching data
   fetch(url).then(function (respsonse) {
@@ -52,22 +87,22 @@ function next() {
 }
 
 function showQuestions() {
-  // getRadioBtn();
   if (index == 10) {
     document.getElementById("qBox").innerHTML = "";
     console.log(score);
+    updateScore();
   } else {
     var question = document.createElement("div");
-    question.innerText = json[index].question;
+    question.innerText = formatString(json[index].question);
     question.className = "q";
     var options = ["1", "2", "3", "4"];
     var random = Math.floor(Math.random() * 4);
-    options[random] = json[index].correct_answer;
+    options[random] = formatString(json[index].correct_answer);
     for (var i = 0, j = 0; i < 4; i++) {
       if (i == random) {
         continue;
       }
-      options[i] = json[index].incorrect_answers[j];
+      options[i] = formatString(json[index].incorrect_answers[j]);
       j++;
     }
     // console.log(options);
@@ -117,7 +152,19 @@ function nextQuestion() {
     }
     showQuestions();
   } else {
+    document.getElementById("qBox").innerHTML = "";
     index++;
     showQuestions();
   }
+}
+
+function formatString(question) {
+  return question;
+}
+
+function updateScore() {
+  json = getData();
+  json[localStorage.getItem("email")].score = score;
+  localStorage.setItem("json", JSON.stringify(json));
+  score = 0;
 }
