@@ -1,0 +1,105 @@
+* {
+  /* border: 1px solid grey; */
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  height: 98%;
+}
+body {
+  height: 100%;
+  background-image: url(../assets/bg.jpg);
+  background-size: cover;
+}
+
+.hor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.ver {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.picBox {
+  width: 1024px;
+  height: 720px;
+  /* background-color: blue; */
+  background-image: url(../assets/bgPattern.jpg);
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition: background 0.8s linear;
+  -moz-transition: background 0.8s linear;
+  -o-transition: background 0.8s linear;
+  -ms-transition: background 0.8s linear;
+  transition: background 0.8s linear;
+}
+
+.material-icons {
+  font-size: 60px;
+  color: rgb(218, 218, 218);
+}
+.material-icons:hover {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.btn1 {
+  opacity: 70%;
+  width: min-content;
+  background-color: rgb(53, 53, 53);
+  border-radius: 8px;
+  /* justify-content: center; */
+}
+
+.btn1:hover {
+  background-color: rgb(87, 87, 87);
+  cursor: pointer;
+}
+.btnsRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.description {
+  padding: 5px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb(255, 255, 255);
+  margin: 20px;
+  font-size: xx-large;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-in-out;
+  width: fit-content;
+}
+
+.description:hover {
+  box-shadow: 0 5px 10px rgba(15, 0, 9, 0.4);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+  margin: 15px;
+  padding: 5px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: x-large;
+}
+.login {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-in-out;
+  margin: 15px;
+  padding: 5px;
+}
+
+.login:hover {
+  box-shadow: 0 5px 10px rgba(15, 0, 9, 0.4);
+  transition: box-shadow 0.3s ease-in-out;
+}

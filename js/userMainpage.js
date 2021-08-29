@@ -43,7 +43,7 @@ function profile() {
 
 function getProfiledata() {
   if (localStorage.getItem("email") == "admin") {
-    console.log("admin");
+    document.location.replace("../html/admin.html");
   } else {
     var json = getData();
     document.getElementById("name").textContent = `Hi ${localStorage.getItem(
