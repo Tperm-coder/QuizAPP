@@ -22,19 +22,17 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="navBar">
+    <div id="navBarClr" class="navBar">
       <div onclick="home()" class="appName">Code Quizzler</div>
       <div class="options">
         <div onclick="takeQuiz()" class="page">take quiz</div>
-        <div onclick="contact()" class="page">contact</div>
-        <div onclick="about()" class="page">about</div>
       </div>
       <div>
         <div onclick="profile()" class="material-icons">account_circle</div>
         <div onclick="logOut()" class="material-icons">logout</div>
       </div>
     </div>
-    <div class="questionArea">
+    <div id="questionArea" class="questionArea">
       <div class="optionsQ">
         <div class="choose">
           <div class="label">Choose a category :</div>
@@ -43,6 +41,9 @@
               <option value="Computer">Computer</option>
               <option value="General_knowledge">General knowledge</option>
               <option value="AnimeMange">Anime & Mange</option>
+              <option value="Animals">Animals</option>
+              <option value="History">History</option>
+              <option value="Video_Games">Video_Games</option>
             </select>
           </div>
         </div>
@@ -68,7 +69,7 @@
       </div>
       <div id="qBox" class="questions"></div>
     </div>
-    <footer>
+    <footer id="footerClr">
       <div class="footer">
         <p style="color: white">Author: Quiz Squad</p>
         <a

@@ -6,6 +6,9 @@ const map = {
   General_knowledge: "9",
   Computer: "18",
   AnimeMange: "31",
+  Animals: "27",
+  History: "23",
+  Video_Games: "15",
 };
 var score = 0;
 var index = -1;
@@ -23,6 +26,33 @@ function checkCurrentUrl() {
   url = url.split("/");
   if (url[2] == "profile.html") {
     getProfiledata();
+  } else if (url[2] == "takeQuiz.html") {
+    var names = ["questionArea", "qBox"];
+    var defaultClrs = ["#9450ff", "#7241c2"];
+
+    for (var i = 0; i < names.length; i++) {
+      var currClr = localStorage.getItem(names[i]);
+      if (currClr === null) {
+        localStorage.setItem(names[i], defaultClrs[i]);
+        currClr = localStorage.getItem(names[i]);
+      }
+      document.getElementById(names[i]).style.backgroundColor = currClr;
+    }
+  }
+}
+
+getPageColors();
+function getPageColors() {
+  var names = ["navBarClr", "footerClr"];
+  var defaultClrs = ["#9450ff", "#7241c2"];
+
+  for (var i = 0; i < names.length; i++) {
+    var currClr = localStorage.getItem(names[i]);
+    if (currClr === null) {
+      localStorage.setItem(names[i], defaultClrs[i]);
+      currClr = localStorage.getItem(names[i]);
+    }
+    document.getElementById(names[i]).style.backgroundColor = currClr;
   }
 }
 function logOut() {
@@ -74,13 +104,17 @@ function start() {
   var category = document.getElementById("category").value;
   var difficulty = document.getElementById("difficulty").value;
 
+  console.log(category);
+
   // creating url
   var url = `https://opentdb.com/api.php?amount=10&category=${map[category]}&difficulty=${difficulty}&type=multiple`;
+  console.log(url);
 
   // fetching data
   fetch(url).then(function (respsonse) {
     respsonse.json().then(function (data) {
       json = data.results;
+      console.log(json);
       next();
     });
   });
@@ -140,6 +174,7 @@ function nextQuestion() {
   var correct = false;
   var choices = document.getElementsByClassName("rad");
   for (var i = 0; i < 4; i++) {
+    console.log(choices.value);
     if (choices[i].checked)
       if (choices[i].value == json[index].correct_answer) {
         correct = true;
@@ -164,6 +199,10 @@ function nextQuestion() {
 }
 
 function formatString(question) {
+  question = question.replaceAll("quot", "");
+  question = question.replaceAll(";", "");
+  question = question.replaceAll("&", "");
+  question = question.replaceAll("#039", "");
   return question;
 }
 
