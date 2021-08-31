@@ -100,6 +100,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: white;
 }
 
 .centerv {
@@ -129,3 +130,10 @@ body {
   justify-content: center;
 }
 
+.h1 {
+  font-size: 60px;
+}
+
+img {
+  border-radius: 50px;
+}

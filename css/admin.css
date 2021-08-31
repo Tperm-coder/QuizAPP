@@ -29,6 +29,8 @@ body {
   transition: box-shadow 0.3s ease-in-out;
   width: fit-content;
   padding: 15px;
+  color: white;
+  font-weight: 500;
 }
 
 .field:hover {
