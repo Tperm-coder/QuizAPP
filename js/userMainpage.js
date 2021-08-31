@@ -208,7 +208,8 @@ function formatString(question) {
 
 function updateScore() {
   json = getData();
-  json[localStorage.getItem("email")].score = score;
+  json[localStorage.getItem("email")].score =
+    parseInt(json[localStorage.getItem("email")].score) + score;
   localStorage.setItem("json", JSON.stringify(json));
   score = 0;
 }
