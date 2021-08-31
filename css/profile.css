@@ -112,3 +112,19 @@ footer {
   font-size: xx-large;
   margin: 10px;
 }
+<--ana hena aho-->
+.h1{
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+}
+body {
+height: 100%;
+background-image: url(../assets/bg.jpg) ;
+background-size: cover;
+background-position: 50%;
+}
+ .prof{
+  display: flex;
+  justify-content: center;
+} 
